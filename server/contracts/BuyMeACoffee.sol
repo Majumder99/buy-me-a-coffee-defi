@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity 0.8.19;
 
 contract BuyMeACoffee {
     //Event to emit when a memo is created
@@ -29,6 +29,11 @@ contract BuyMeACoffee {
         owner = payable(msg.sender);
     }
 
+    modifier onlyOwner(){
+        require(msg.sender == owner, "You are not owner so no tip");
+        _;
+    }
+
     /**
     * @dev buy me a coffee , send all the eth to this contract only 
     * @param _name name of the buyer
@@ -49,7 +54,7 @@ contract BuyMeACoffee {
     * @dev send all the eth on this contract to the owner
     */
 
-    function withdrawTips() public{
+    function withdrawTips() public onlyOwner{
         require(owner.send(address(this).balance));
     }
 
