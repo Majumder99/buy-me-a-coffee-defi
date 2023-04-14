@@ -1,13 +1,8 @@
-# Sample Hardhat Project
+<h1>Buy Me A Coffee Defi</h1>
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+<h2>You can connect to sepolia test net or hardhat testnet</h2>
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+<p>
+  Click <a href="https://www.youtube.com/watch?v=cxxKdJk55Lk&list=PLMj8NvODurfEYLsuiClgikZBGDfhwdcXF&index=3">here</a> for the
+  resource.
+</p>
