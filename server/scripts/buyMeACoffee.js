@@ -1,9 +1,11 @@
 const hre = require("hardhat");
 
 async function main() {
+  const [owner] = await hre.ethers.getSigners();
   const BuyMeACoffee = await hre.ethers.getContractFactory("BuyMeACoffee");
   const buyMeACoffee = await BuyMeACoffee.deploy();
   await buyMeACoffee.deployed();
+  console.log("Deploying contract with : ", owner.address);
   console.log("Address of the contract is : ", buyMeACoffee.address);
   saveFrontendFiles(buyMeACoffee, "BuyMeACoffee");
 }
